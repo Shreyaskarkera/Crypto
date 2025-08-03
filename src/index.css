@@ -1,1 +1,13 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./assets/Fonts/Orbitron/static/Orbitron-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 @import "tailwindcss";
+
+@theme{
+    --font-orbitron:Orbitron;
+}

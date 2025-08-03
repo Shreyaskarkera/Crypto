@@ -2,3 +2,6 @@
 body{
   background-color: black;
 }
+:root {
+  --font-custom: 'Orbitron', sans-serif;
+}

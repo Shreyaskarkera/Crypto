@@ -1,4 +1,6 @@
 import Nav from './Components/Nav'
+import Home from './Components/Home'
+import HomeCryptos from './Components/HomeCryptos'
 import './App.css'
 
 function App() {
@@ -6,8 +8,12 @@ function App() {
 
   return (
     <>
-      <div className="max-w-5=8xl mx-auto px-40">
-        <Nav />
+      <div className='bg-gradient-to-b from-indigo-950 via-blue-700/10 to-black'>
+        <div className="max-w-6xl mx-auto px-40 ">
+          <Nav />
+          <Home />
+          <HomeCryptos />
+        </div>
       </div>
 
     </>
