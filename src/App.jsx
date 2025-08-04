@@ -1,20 +1,29 @@
 import Nav from './Components/Nav'
 import Home from './Components/Home'
 import HomeCryptos from './Components/HomeCryptos'
+import { CryptoProvider } from './Components/CryptoContext'
 import './App.css'
+import MarketUpdate from './Components/MarketUpdate'
 
 function App() {
 
 
   return (
     <>
-      <div className='bg-gradient-to-b from-indigo-950 via-blue-700/10 to-black'>
-        <div className="max-w-6xl mx-auto px-40 ">
+      <div className="max-w-6xl mx-auto px-40 ">
+        <div className="min-h-screen">
           <Nav />
           <Home />
-          <HomeCryptos />
+          <CryptoProvider>
+            <HomeCryptos />
+          </CryptoProvider>
         </div>
-      </div>
+        <div>
+          <CryptoProvider>
+            <MarketUpdate />
+          </CryptoProvider>
+        </div>
+      </div >
 
     </>
   )

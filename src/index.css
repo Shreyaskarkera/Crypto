@@ -11,3 +11,6 @@
 @theme{
     --font-orbitron:Orbitron;
 }
+body {
+  @apply  bg-gradient-to-b from-indigo-900 via-black to-black;
+}

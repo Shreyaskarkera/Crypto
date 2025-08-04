@@ -1,46 +1,32 @@
-
-import React, { useEffect, useState } from 'react';
+import { useCrypto } from "./CryptoContext";
 
 const HomeCryptos = () => {
-    const [coins, setCoins] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const [coinRes, tickerRes] = await Promise.all([
-                    fetch('https://api.coinpaprika.com/v1/tickers?limit=10'),
-                    fetch('https://api.coinpaprika.com/v1/tickers')
-                ]);
-                const coinList = await coinRes.json();
-                const tickerList = await tickerRes.json();
-
-                const meargeData = tickerList.map(ticker => {
-                    const coinInfo = coinList.find(c => c.id === ticker.id);
-
-                    return {
-                        ...ticker,
-                        logo: `https://coinpaprika.com/coin/${ticker.id}/logo.png`,
-                        symbol: coinInfo?.symbol || '',
-                    };
-                });
-                setCoins(meargeData);
-                setLoading(false);
-            } catch (err) {
-                console.error('Error fetching data:', err);
-                setLoading(false);
-            }
-        };
-        fetchData();
-    }, []);
-
-    if (loading) return <p className="text-white">Loading...</p>;
-
+    const { coins, loading } = useCrypto();
+    if (loading) return <p className="text-white">Loading...</p>
     return (
-        <div className="text-white px-6">
-            <h1 className="text-3xl font-bold mb-4">Top Cryptocurrencies</h1>
-
+        <div className="flex gap-8 items-center justify-center flex-wrap mt-10">
+            {coins.slice(0, 4).map((coin) => (
+                <div key={coin.id} className="text-white text-center w-40">
+                    <img
+                        src={`https://static.coinpaprika.com/coin/${coin.id}/logo.png`}
+                        className="w-16 h-16 mx-auto mb-2 "
+                        alt={coin.name}
+                        onError={(e) => (e.target.style.display = 'none')}
+                    />
+                    <p className="font-semibold">{coin.name}</p>
+                    <p className="text-sm">
+                        ${coin.quotes.USD.price.toFixed(2)}
+                    </p>
+                    <p
+                        className={`text-xs ${coin.quotes.USD.percent_change_24h > 0 ? 'text-green-400' : 'text-red-400'
+                            }`}
+                    >
+                        {coin.quotes.USD.percent_change_24h?.toFixed(2)}%
+                    </p>
+                </div>
+            ))}
         </div>
+
     );
 };
 
