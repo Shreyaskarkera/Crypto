@@ -4,6 +4,8 @@ import HomeCryptos from './Components/HomeCryptos'
 import { CryptoProvider } from './Components/CryptoContext'
 import './App.css'
 import MarketUpdate from './Components/MarketUpdate'
+import ChooseUS from './Components/ChooseUS'
+import JoinUs from './Components/JoinUs'
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
             <MarketUpdate />
           </CryptoProvider>
         </div>
+        <ChooseUS />
+        <JoinUs />
       </div >
 
     </>
