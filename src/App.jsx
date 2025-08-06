@@ -6,6 +6,7 @@ import './App.css'
 import MarketUpdate from './Components/MarketUpdate'
 import ChooseUS from './Components/ChooseUS'
 import JoinUs from './Components/JoinUs'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
         <ChooseUS />
         <JoinUs />
       </div >
+      <footer>
+        <Footer />
+      </footer>
 
     </>
   )
