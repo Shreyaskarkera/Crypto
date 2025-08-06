@@ -7,13 +7,21 @@ import MarketUpdate from './Components/MarketUpdate'
 import ChooseUS from './Components/ChooseUS'
 import JoinUs from './Components/JoinUs'
 import Footer from './Components/Footer'
+import { useEffect } from 'react'
+
+
 
 function App() {
 
-
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      alert("For the best experience, please use a tablet or desktop. ");
+    }
+  }, [])
   return (
     <>
-      <div className="max-w-6xl mx-auto px-40 ">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
         <div className="min-h-screen">
           <Nav />
           <Home />
@@ -28,7 +36,7 @@ function App() {
         </div>
         <ChooseUS />
         <JoinUs />
-      </div >
+      </div>
       <footer>
         <Footer />
       </footer>

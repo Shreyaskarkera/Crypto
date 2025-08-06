@@ -1,23 +1,65 @@
-import React from 'react'
-import { Github, Twitter } from 'lucide-react';
-const Nav = () => {
-    return (
-        <nav >
-            <div className=" text-white flex justify-between items-center pt-3">
-                <h3 className="font-bold text-lg font-inter">CRYPTODEX</h3>
-                <ul className="flex space-x-8 text-[10px]">
-                    <li className="cursor-pointer hover:text-gray-400 font-bold">Home</li>
-                    <li className="cursor-pointer hover:text-gray-400 font-bold">Market</li>
-                    <li className="cursor-pointer hover:text-gray-400 font-bold">Choose Us</li>
-                    <li className="cursor-pointer hover:text-gray-400 font-bold">Join</li>
-                </ul>
-                <ul className="flex space-x-8 text-[10px]">
-                    <li className="cursor-pointer hover:text-gray-400 font-bold text-[10px]"><Twitter size={16} strokeWidth={1.25} /></li>
-                    <li className="cursor-pointer hover:text-gray-400 font-bold"><Github size={16} strokeWidth={1.25} /></li>
-                </ul>
-            </div>
-        </nav>
-    )
-}
+import { useState } from "react";
+import { TwitterLogo, GithubLogo, List, X } from 'phosphor-react';
 
-export default Nav
+export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <nav className="bg-transparent text-white px-4 py-3">
+            {/* Nav container */}
+            <div className="flex items-center justify-between">
+                {/* Logo */}
+                <h3 className="font-bold text-lg font-inter">CRYPTODEX</h3>
+
+                {/* Desktop Nav */}
+                <div className="hidden md:flex items-center justify-between w-full text-[12px] font-bold">
+                    {/* Center Nav Links */}
+                    <ul className="flex space-x-8 mx-auto">
+                        <li className="cursor-pointer hover:text-gray-400">Home</li>
+                        <li className="cursor-pointer hover:text-gray-400">Market</li>
+                        <li className="cursor-pointer hover:text-gray-400">Choose Us</li>
+                        <li className="cursor-pointer hover:text-gray-400">Join</li>
+                    </ul>
+
+                    {/* Right Social Icons */}
+                    <ul className="flex space-x-4 justify-center">
+                        <li className="cursor-pointer hover:text-[#1DA1F2]">
+                            <TwitterLogo size={16} weight="fill" />
+                        </li>
+                        <li className="cursor-pointer hover:text-gray-400">
+                            <GithubLogo size={16} weight="fill" />
+                        </li>
+                    </ul>
+                </div>
+
+
+                {/* Mobile Menu Button - right aligned */}
+                <div className="md:hidden">
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen ? <X size={24} /> : <List size={24} />}
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Dropdown Menu */}
+            {isOpen && (
+                <div className="md:hidden mt-4 flex flex-col items-center space-y-3 text-[12px] font-bold">
+                    <ul className="space-y-2 text-center">
+                        <li className="cursor-pointer hover:text-gray-400">Home</li>
+                        <li className="cursor-pointer hover:text-gray-400">Market</li>
+                        <li className="cursor-pointer hover:text-gray-400">Choose Us</li>
+                        <li className="cursor-pointer hover:text-gray-400">Join</li>
+                    </ul>
+                    <ul className="flex space-x-4 pt-2">
+                        <li className="cursor-pointer hover:text-[#1DA1F2]">
+                            <TwitterLogo size={16} weight="fill" />
+                        </li>
+                        <li className="cursor-pointer hover:text-gray-400">
+                            <GithubLogo size={16} weight="fill" />
+                        </li>
+                    </ul>
+                </div>
+            )}
+        </nav>
+    );
+}

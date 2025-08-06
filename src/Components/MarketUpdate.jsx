@@ -22,7 +22,7 @@ const MarketUpdate = () => {
                     <h2 className='text-white text-3xl font-bold'>Market Update</h2>
                 </div>
                 <div className="overflow-x-auto">
-                    <table className='text-white table-auto w-full mt-4 border-collapse'>
+                    <table className='text-white table-auto w-full mt-4 border-collapse md:mr-10'>
                         <thead>
                             <tr className='bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-500 '>
                                 <th className="text-left p-2">Coin</th>

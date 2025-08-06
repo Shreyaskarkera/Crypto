@@ -21,7 +21,7 @@ const ChooseUS = () => {
                     </span>
                 </h1>
             </div>
-            <div className="grid grid-cols-3 mt-24 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 mt-24 gap-10 px-4">
                 <div className="grid grid-rows-3 text-white gap-6">
                     <div className="flex items-start gap-4">
                         <Wallet size={28} weight="fill" className="text-white shrink-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center text-7xl font-black rounded p-1 mt-2" />
@@ -55,7 +55,7 @@ const ChooseUS = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <img src={ChooseUSImg} alt="Choose Us" className="h-11/12" />
+                    <img src={ChooseUSImg} alt="Choose Us" className="w-full max-w-[300px] md:max-w-full h-auto" />
                 </div>
 
                 <div className="grid grid-rows-3 text-white gap-6">
