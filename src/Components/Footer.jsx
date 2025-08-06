@@ -7,6 +7,8 @@ import {
 } from 'phosphor-react';
 import FooterImg from '../assets/Images/FooterImg.png'
 import FooterImg2 from '../assets/Images/FooterImg2.png'
+
+
 const Footer = () => {
     return (
         <footer className="bg-black text-white py-6">
