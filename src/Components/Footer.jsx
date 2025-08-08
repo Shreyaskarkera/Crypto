@@ -26,10 +26,10 @@ const Footer = () => {
                 {/* Center Content */}
                 <div className="flex flex-col items-center">
                     <div className="grid grid-cols-4 gap-4 mb-3">
-                        <TwitterLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#1DA1F2] transition-colors duration-200 cursor-pointer" />
-                        <FacebookLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#1877F2] transition-colors duration-200 cursor-pointer" />
-                        <DiscordLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#7289da] transition-colors duration-200 cursor-pointer" />
-                        <YoutubeLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#FF0000] transition-colors duration-200 cursor-pointer" />
+                        <a href="https://x.com/"> <TwitterLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#1DA1F2] transition-colors duration-200 cursor-pointer" /></a>
+                        <a href="https://www.facebook.com/"><FacebookLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#1877F2] transition-colors duration-200 cursor-pointer" /></a>
+                        <a href="https://discord.com/"><DiscordLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#7289da] transition-colors duration-200 cursor-pointer" /></a>
+                        <a href="https://www.youtube.com/"><YoutubeLogo size={28} weight="fill" className="text-[#e3e3e3] hover:text-[#FF0000] transition-colors duration-200 cursor-pointer" /></a>
                     </div>
                     <div className="text-sm text-gray-500 flex flex-wrap justify-center gap-4">
                         <p className="cursor-pointer hover:underline">Privacy</p>
