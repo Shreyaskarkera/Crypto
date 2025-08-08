@@ -53,10 +53,10 @@ export default function Navbar() {
                         </ul>
                         <ul className="flex space-x-4 pt-2">
                             <li className="cursor-pointer hover:text-[#1DA1F2]">
-                                <TwitterLogo size={16} weight="fill" />
+                                <a href="https://x.com/"><TwitterLogo size={16} weight="fill" /></a>
                             </li>
                             <li className="cursor-pointer hover:text-gray-400">
-                                <GithubLogo size={16} weight="fill" />
+                                <a href="https://github.com/Shreyaskarkera/Crypto"><GithubLogo size={16} weight="fill" /></a>
                             </li>
                         </ul>
                     </div>
