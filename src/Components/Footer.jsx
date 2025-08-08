@@ -11,7 +11,7 @@ import FooterImg2 from '../assets/Images/FooterImg2.png'
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white py-6">
+        <footer className="bg-black text-white ">
             <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-6 px-4 text-center">
 
                 {/* Left Image */}

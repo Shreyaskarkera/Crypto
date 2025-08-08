@@ -5,7 +5,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-transparent text-white px-4 py-3 sticky top-0 backdrop-blur-sm" >
+        <nav className="bg-transparent text-white p-5 sticky top-0 backdrop-blur-sm " >
             {/* Nav container */}
             <div className="flex items-center justify-between">
                 {/* Logo */}
@@ -24,10 +24,10 @@ export default function Navbar() {
                     {/* Right Social Icons */}
                     <ul className="flex space-x-4 justify-center">
                         <li className="cursor-pointer hover:text-[#1DA1F2]">
-                            <TwitterLogo size={16} weight="fill" />
+                            <a href="https://x.com/"><TwitterLogo size={16} weight="fill" /></a>
                         </li>
                         <li className="cursor-pointer hover:text-gray-400">
-                            <GithubLogo size={16} weight="fill" />
+                            <a href="https://github.com/Shreyaskarkera/Crypto"><GithubLogo size={16} weight="fill" /></a>
                         </li>
                     </ul>
                 </div>
@@ -46,10 +46,10 @@ export default function Navbar() {
                 isOpen && (
                     <div className="md:hidden mt-4 flex flex-col items-center space-y-3 text-[12px] font-bold">
                         <ul className="space-y-2 text-center">
-                            <li className="cursor-pointer hover:text-gray-400">Home</li>
-                            <li className="cursor-pointer hover:text-gray-400">Market</li>
-                            <li className="cursor-pointer hover:text-gray-400">Choose Us</li>
-                            <li className="cursor-pointer hover:text-gray-400">Join</li>
+                            <a href="#home"> <li className="cursor-pointer hover:text-gray-400">Home</li></a>
+                            <a href="#marketUpdte"><li className="cursor-pointer hover:text-gray-400">Market</li></a>
+                            <a href="#chooseUs"><li className="cursor-pointer hover:text-gray-400">Choose Us</li></a>
+                            <a href="#join"><li className="cursor-pointer hover:text-gray-400">Join</li></a>
                         </ul>
                         <ul className="flex space-x-4 pt-2">
                             <li className="cursor-pointer hover:text-[#1DA1F2]">

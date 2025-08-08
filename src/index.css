@@ -14,3 +14,7 @@
 body {
   @apply  bg-gradient-to-b from-indigo-900 via-black to-black;
 }
+
+html {
+  scroll-behavior: smooth;
+}

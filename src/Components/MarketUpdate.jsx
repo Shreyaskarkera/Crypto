@@ -16,7 +16,7 @@ const MarketUpdate = () => {
     const paginatedCoins = limitedCoins.slice(startIndex, startIndex + coinsPerPage);
     return (
         <>
-            <div className="mb-30" id="marketUpdte">
+            <div className='py-16' id="marketUpdte">
 
                 <div>
                     <h2 className='text-white text-3xl font-bold'>Market Update</h2>

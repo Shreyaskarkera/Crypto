@@ -13,7 +13,7 @@ console.log(ChooseUSImg);
 const ChooseUS = () => {
     return (
         <>
-            <div id="chooseUs">
+            <div id="chooseUs" className='py-16'>
                 <h1 className="text-white text-center font-bold text-6xl">
                     WHY{' '}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-rose-700">
